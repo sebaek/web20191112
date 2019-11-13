@@ -1,0 +1,7 @@
+.special {
+    border: 5px solid black;
+}
+
+.note {
+    text-decoration: underline;
+}
