@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>
         CSS 예제
     </title>
-    <link rel="stylesheet" href="mystyle.css">
+   
+    
     <style>
-p {
-    background-color: chartreuse;
-}
+        p#para1 {
+            border: 10px double blue;
+            background-color: chartreuse;
+        }
+
+        .special.note {
+            border: 8px dotted red;
+        }
+        .special {
+            text-decoration: line-through;
+        }
+
 
     </style>
+
+<link rel="stylesheet" href="mystyle.css">
 </head>
+
 <body>
 
-    <p id="para1" class="special note" style="color: blue; text-align: center;">
+    <p id="para1" class="special note" style="border:2px dotted black; color: blue; text-align: center;">
         그림으로 개념을 이해하는 알고리즘
     </p>
 
 </body>
+
 </html>
