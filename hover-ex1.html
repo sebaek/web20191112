@@ -9,9 +9,38 @@
         p {
             visibility: hidden;
         }
+
+        .menu {
+            width: 100px;
+            height: 50px;
+            background-color: aqua;
+            position: relative;
+        }
+        .submenu {
+            width: 300px;
+            position: absolute;
+            top: 50px;
+            background-color: beige;
+            display: none;
+        }
+        .submenu a {
+            display: block;
+        }
+        .menu:hover .submenu {
+            display: block;
+        }
     </style>
 </head>
 <body>
+    <div class="menu">
+        <span>주 메뉴</span>
+        <div class="submenu">
+            <a href="">서브 메뉴1</a>
+            <a href="">서브 메뉴2</a>
+            <a href="">서브 메뉴3</a>
+        </div>
+    </div>
+
     <h1>Lorem, ipsum dolor.</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ea, sed culpa distinctio quam dolorem, ratione aliquam porro quis dignissimos ipsam eius minima deleniti enim, mollitia itaque voluptatibus beatae perspiciatis.</p>
 
