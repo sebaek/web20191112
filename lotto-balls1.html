@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <style>
+        .circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color:dodgerblue;
+            margin: 20px;
+        }
+        .circle div {
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
+        }
+        </style>
+    </head>
 <body>
-<p id="demo1"></p>
-<p id="demo2"></p>
-<p id="demo3"></p>
-<p id="demo4"></p>
-<p id="demo5"></p>
-<p id="demo6"></p>
-
+<div class="circle">
+    <div id="demo1"></div>
+</div>
+<div class="circle">
+    <div id="demo2"></div>
+</div>
+<div class="circle">
+    <div id="demo3"></div>
+</div>
+<div class="circle">
+    <div id="demo4"></div>
+</div>
+<div class="circle">
+    <div id="demo5"></div>
+</div>
+<div class="circle">
+    <div id="demo6"></div>
+</div>
 <script>
 document.getElementById("demo1").innerHTML = Math.floor(Math.random()*45)+1;
 document.getElementById("demo2").innerHTML = Math.floor(Math.random()*45)+1;
