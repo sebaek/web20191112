@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+
+    </head>
+
+    <body>
+        
+    <input onkeyup="searchText();" id="input1" type="text">
+    <p id="result"></p>
+    <p id="para1">Apple, Banana, Pizza, Coffee, Orange</p>
+
+    <script>
+    function searchText() {
+        var text = document.getElementById("para1").innerHTML;
+        var input = document.getElementById("input1").value;
+
+        var index = text.indexOf(input);
+        document.getElementById("result").innerHTML = index;
+    }
+    </script>
+
+    </body>
+</html>
