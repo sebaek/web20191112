@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <input type="number" id="input1">
+    <input type="number" id="input2"><br>
+    <button onclick="check();">왼쪽이 더 큰가?</button>
+    <p id="result"></p>
+
+    <script>
+function check() {
+    var n1 = document.getElementById('input1').innerHTML;
+    n1 = Number(n1);
+    var n2 = document.getElementById('input2').innerHTML;
+    n2 = Number(n2);
+
+    if (n1 > n2) {
+        document.getElementById('result').innerHTML = "YES";
+    }
+    if (n1 < n2) {
+        document.getElementById('result').innerHTML = "NO";
+    }
+    // if (n1 == n2) {
+    //     document.getElementById('result').innerHTML = "EQUALS";
+    // }
+}
+    
+    </script>
+
+</body>
+</html>
