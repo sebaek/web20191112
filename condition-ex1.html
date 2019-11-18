@@ -9,9 +9,9 @@
 
     <script>
 function check() {
-    var n1 = document.getElementById('input1').innerHTML;
+    var n1 = document.getElementById('input1').value;
     n1 = Number(n1);
-    var n2 = document.getElementById('input2').innerHTML;
+    var n2 = document.getElementById('input2').value;
     n2 = Number(n2);
 
     if (n1 > n2) {
@@ -20,9 +20,9 @@ function check() {
     if (n1 < n2) {
         document.getElementById('result').innerHTML = "NO";
     }
-    // if (n1 == n2) {
-    //     document.getElementById('result').innerHTML = "EQUALS";
-    // }
+    if (n1 == n2) {
+        document.getElementById('result').innerHTML = "EQUALS";
+    }
 }
     
     </script>
