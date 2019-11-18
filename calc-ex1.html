@@ -15,6 +15,38 @@
         <div id="result"></div>
 
         <script>
+function add() {
+    console.log("add run...");
+    var num1 = document.getElementById("input1").value;
+    var num2 = document.getElementById("input2").value;
+
+    console.log(parseInt(num1));
+    console.log(parseFloat(num1));
+    console.log(Number(num1));
+
+    num1 = Number(num1);
+    num2 = Number(num2);
+    document.getElementById("result").innerHTML = num1 + num2; 
+}
+
+function divide() {
+    console.log("mutiplay run...");
+    var num1 = document.getElementById("input1").value;
+    var num2 = document.getElementById("input2").value;
+    console.log(num1);
+    console.log(num2);
+    console.log(num1 * num2);
+    document.getElementById("result").innerHTML = num1 / num2;  
+}
+function minus() {
+    console.log("mutiplay run...");
+    var num1 = document.getElementById("input1").value;
+    var num2 = document.getElementById("input2").value;
+    console.log(num1);
+    console.log(num2);
+    console.log(num1 * num2);
+    document.getElementById("result").innerHTML = num1 - num2;
+}
 function multiply() {
     console.log("mutiplay run...");
     var num1 = document.getElementById("input1").value;
