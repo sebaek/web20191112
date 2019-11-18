@@ -46,18 +46,29 @@
 </div>
 <script>
 function getRandomNumber() {
+    console.log('getRandomNumber start');
     var ran = Math.floor(Math.random()*45)+1;
     return ran;
+    console.log('getRandomNumber start');
 }
 function showNumber(elemId) {
+    console.log('showNumber start');
     document.getElementById(elemId).innerHTML = getRandomNumber();
+    console.log('showNumber end');
 }
+console.log(1);
 showNumber("demo1");
+console.log(2);
 showNumber("demo2");
+console.log(3);
 showNumber("demo3");
+console.log(4);
 showNumber("demo4");
+console.log(5);
 showNumber("demo5");
+console.log(6);
 showNumber("demo6");
+console.log(7);
 
 // function showNumber1() {
 //     document.getElementById("demo1").innerHTML = getRandomNumber();
