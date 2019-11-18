@@ -45,23 +45,27 @@
     <div id="demo6"></div>
 </div>
 <script>
+function getRandomNumber() {
+    var ran = Math.floor(Math.random()*45)+1;
+    return ran;
+}
 function showNumber1() {
-    document.getElementById("demo1").innerHTML = Math.floor(Math.random()*45)+1;
+    document.getElementById("demo1").innerHTML = getRandomNumber();
 }
 function showNumber2() {
-    document.getElementById("demo2").innerHTML = Math.floor(Math.random()*45)+1;
+    document.getElementById("demo2").innerHTML = getRandomNumber();
 }
 function showNumber3() {
-    document.getElementById("demo3").innerHTML = Math.floor(Math.random()*45)+1;
+    document.getElementById("demo3").innerHTML = getRandomNumber();
 }
 function showNumber4() {
-    document.getElementById("demo4").innerHTML = Math.floor(Math.random()*45)+1;
+    document.getElementById("demo4").innerHTML = getRandomNumber();
 }
 function showNumber5() {
-    document.getElementById("demo5").innerHTML = Math.floor(Math.random()*45)+1;
+    document.getElementById("demo5").innerHTML = getRandomNumber();
 }
 function showNumber6() {
-    document.getElementById("demo6").innerHTML = Math.floor(Math.random()*45)+1;
+    document.getElementById("demo6").innerHTML = getRandomNumber();
 }
 showNumber1();
 showNumber2();
