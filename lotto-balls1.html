@@ -26,6 +26,7 @@
         </style>
     </head>
 <body>
+<button onclick="showNumbers();">로또 숫자 만들기</button>
 <div onclick="showNumber('demo1');" class="circle">
     <div id="demo1"></div>
 </div>
@@ -56,19 +57,24 @@ function showNumber(elemId) {
     document.getElementById(elemId).innerHTML = getRandomNumber();
     console.log('showNumber end'); // 4
 }
-console.log(1); // 1
-showNumber("demo1");
-console.log(2); // 5
-showNumber("demo2");
-console.log(3); // 
-showNumber("demo3");
-console.log(4); // 
-showNumber("demo4");
-console.log(5); // 
-showNumber("demo5")
-console.log(6); // 
-showNumber("demo6");
-console.log(7); // 
+
+function showNumbers() {
+    console.log(1); // 1
+    showNumber("demo1");
+    console.log(2); // 5
+    showNumber("demo2");
+    console.log(3); // 
+    showNumber("demo3");
+    console.log(4); // 
+    showNumber("demo4");
+    console.log(5); // 
+    showNumber("demo5")
+    console.log(6); // 
+    showNumber("demo6");
+    console.log(7); // 
+}
+
+showNumbers();
 
 // function showNumber1() {
 //     document.getElementById("demo1").innerHTML = getRandomNumber();
