@@ -19,18 +19,18 @@
         var text = document.getElementById("para1").textContent;
         var input = document.getElementById("input1").value;
 
-        var index = text.indexOf(input);
+        // var index = text.indexOf(input);
 
-        var str1 = text.slice(0, index);
-        var str2 = text.substr(index, input.length);
-        var str3 = text.slice(index + input.length);
+        // var str1 = text.slice(0, index);
+        // var str2 = text.substr(index, input.length);
+        // var str3 = text.slice(index + input.length);
 
         // document.getElementById('result1').innerHTML = str1;
         // document.getElementById('result2').innerHTML = str2;
         // document.getElementById('result3').innerHTML = str3;
 
-        document.getElementById('para1').innerHTML = 
-            str1 + "<mark>" + str2 + "</mark>" + str3;
+        var target = text.replace(input, "<mark>" + input + "</mark>");
+        document.getElementById('para1').innerHTML = target;
 
         console.log(str1);
         console.log(str2);
