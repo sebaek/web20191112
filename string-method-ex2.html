@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<html>
+    <body>
+        
+        <input onkeyup="toUpper();" type="text" id="input1">
+        <p id="result"></p>
+
+        <script>
+function toUpper() {
+    var input = document.getElementById("input1").value;
+    document.getElementById("result").innerHTML = input.toUpperCase();
+}
+        </script>
+    </body>
+</html>
