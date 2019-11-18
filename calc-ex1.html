@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        </style>
+    </head>
+
+    <body>
+        <input id="input1" type="number"><br>
+        <input id="input2" type="number"><br>
+        <button onclick="multiply()">&times;</button>
+        <div id="result"></div>
+
+        <script>
+function multiply() {
+    console.log("mutiplay run...");
+    var num1 = document.getElementById("input1").value;
+    var num2 = document.getElementById("input2").value;
+    console.log(num1);
+    console.log(num2);
+    console.log(num1 * num2);
+    document.getElementById("result").innerHTML = num1 * num2;
+}
+        
+        </script>
+    </body>
+</html>
