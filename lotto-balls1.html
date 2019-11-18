@@ -12,6 +12,12 @@
             background-color:dodgerblue;
             margin: 20px;
         }
+        .circle:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .circle:active {
+            box-shadow: none;
+        }
         .circle div {
             font-size: 50px;
             font-weight: bold;
@@ -23,19 +29,19 @@
 <div onclick="document.getElementById('demo1').innerHTML=Math.floor(Math.random()*45)+1" class="circle">
     <div id="demo1"></div>
 </div>
-<div class="circle">
+<div onclick="document.getElementById('demo2').innerHTML=Math.floor(Math.random()*45)+1" class="circle">
     <div id="demo2"></div>
 </div>
-<div class="circle">
+<div onclick="document.getElementById('demo3').innerHTML=Math.floor(Math.random()*45)+1" class="circle">
     <div id="demo3"></div>
 </div>
-<div class="circle">
+<div onclick="document.getElementById('demo4').innerHTML=Math.floor(Math.random()*45)+1" class="circle">
     <div id="demo4"></div>
 </div>
-<div class="circle">
+<div onclick="document.getElementById('demo5').innerHTML=Math.floor(Math.random()*45)+1" class="circle">
     <div id="demo5"></div>
 </div>
-<div class="circle">
+<div onclick="document.getElementById('demo6').innerHTML=Math.floor(Math.random()*45)+1" class="circle">
     <div id="demo6"></div>
 </div>
 <script>
