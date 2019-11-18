@@ -32,16 +32,16 @@
 <div onclick="showNumber2();" class="circle">
     <div id="demo2"></div>
 </div>
-<div onclick="document.getElementById('demo3').innerHTML=Math.floor(Math.random()*45)+1" class="circle">
+<div onclick="showNumber3();" class="circle">
     <div id="demo3"></div>
 </div>
-<div onclick="document.getElementById('demo4').innerHTML=Math.floor(Math.random()*45)+1" class="circle">
+<div onclick="showNumber4();" class="circle">
     <div id="demo4"></div>
 </div>
-<div onclick="document.getElementById('demo5').innerHTML=Math.floor(Math.random()*45)+1" class="circle">
+<div onclick="showNumber5();" class="circle">
     <div id="demo5"></div>
 </div>
-<div onclick="document.getElementById('demo6').innerHTML=Math.floor(Math.random()*45)+1" class="circle">
+<div onclick="showNumber6();" class="circle">
     <div id="demo6"></div>
 </div>
 <script>
@@ -51,12 +51,25 @@ function showNumber1() {
 function showNumber2() {
     document.getElementById("demo2").innerHTML = Math.floor(Math.random()*45)+1;
 }
+function showNumber3() {
+    document.getElementById("demo3").innerHTML = Math.floor(Math.random()*45)+1;
+}
+function showNumber4() {
+    document.getElementById("demo4").innerHTML = Math.floor(Math.random()*45)+1;
+}
+function showNumber5() {
+    document.getElementById("demo5").innerHTML = Math.floor(Math.random()*45)+1;
+}
+function showNumber6() {
+    document.getElementById("demo6").innerHTML = Math.floor(Math.random()*45)+1;
+}
 showNumber1();
 showNumber2();
-document.getElementById("demo3").innerHTML = Math.floor(Math.random()*45)+1;
-document.getElementById("demo4").innerHTML = Math.floor(Math.random()*45)+1;
-document.getElementById("demo5").innerHTML = Math.floor(Math.random()*45)+1;
-document.getElementById("demo6").innerHTML = Math.floor(Math.random()*45)+1;
+showNumber3();
+showNumber4();
+showNumber5();
+showNumber6();
+
 </script>
 
 </body>
