@@ -26,22 +26,22 @@
         </style>
     </head>
 <body>
-<div onclick="showNumber1();" class="circle">
+<div onclick="showNumber('demo1');" class="circle">
     <div id="demo1"></div>
 </div>
-<div onclick="showNumber2();" class="circle">
+<div onclick="showNumber('demo2');" class="circle">
     <div id="demo2"></div>
 </div>
-<div onclick="showNumber3();" class="circle">
+<div onclick="showNumber('demo3');" class="circle">
     <div id="demo3"></div>
 </div>
-<div onclick="showNumber4();" class="circle">
+<div onclick="showNumber('demo4');" class="circle">
     <div id="demo4"></div>
 </div>
-<div onclick="showNumber5();" class="circle">
+<div onclick="showNumber('demo5');" class="circle">
     <div id="demo5"></div>
 </div>
-<div onclick="showNumber6();" class="circle">
+<div onclick="showNumber('demo6');" class="circle">
     <div id="demo6"></div>
 </div>
 <script>
@@ -49,30 +49,40 @@ function getRandomNumber() {
     var ran = Math.floor(Math.random()*45)+1;
     return ran;
 }
-function showNumber1() {
-    document.getElementById("demo1").innerHTML = getRandomNumber();
+function showNumber(elemId) {
+    document.getElementById(elemId).innerHTML = getRandomNumber();
 }
-function showNumber2() {
-    document.getElementById("demo2").innerHTML = getRandomNumber();
-}
-function showNumber3() {
-    document.getElementById("demo3").innerHTML = getRandomNumber();
-}
-function showNumber4() {
-    document.getElementById("demo4").innerHTML = getRandomNumber();
-}
-function showNumber5() {
-    document.getElementById("demo5").innerHTML = getRandomNumber();
-}
-function showNumber6() {
-    document.getElementById("demo6").innerHTML = getRandomNumber();
-}
-showNumber1();
-showNumber2();
-showNumber3();
-showNumber4();
-showNumber5();
-showNumber6();
+showNumber("demo1");
+showNumber("demo2");
+showNumber("demo3");
+showNumber("demo4");
+showNumber("demo5");
+showNumber("demo6");
+
+// function showNumber1() {
+//     document.getElementById("demo1").innerHTML = getRandomNumber();
+// }
+// function showNumber2() {
+//     document.getElementById("demo2").innerHTML = getRandomNumber();
+// }
+// function showNumber3() {
+//     document.getElementById("demo3").innerHTML = getRandomNumber();
+// }
+// function showNumber4() {
+//     document.getElementById("demo4").innerHTML = getRandomNumber();
+// }
+// function showNumber5() {
+//     document.getElementById("demo5").innerHTML = getRandomNumber();
+// }
+// function showNumber6() {
+//     document.getElementById("demo6").innerHTML = getRandomNumber();
+// }
+// showNumber1();
+// showNumber2();
+// showNumber3();
+// showNumber4();
+// showNumber5();
+// showNumber6();
 
 </script>
 
