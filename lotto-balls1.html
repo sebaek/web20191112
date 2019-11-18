@@ -26,10 +26,10 @@
         </style>
     </head>
 <body>
-<div onclick="document.getElementById('demo1').innerHTML=Math.floor(Math.random()*45)+1" class="circle">
+<div onclick="showNumber1();" class="circle">
     <div id="demo1"></div>
 </div>
-<div onclick="document.getElementById('demo2').innerHTML=Math.floor(Math.random()*45)+1" class="circle">
+<div onclick="showNumber2();" class="circle">
     <div id="demo2"></div>
 </div>
 <div onclick="document.getElementById('demo3').innerHTML=Math.floor(Math.random()*45)+1" class="circle">
@@ -45,8 +45,14 @@
     <div id="demo6"></div>
 </div>
 <script>
-document.getElementById("demo1").innerHTML = Math.floor(Math.random()*45)+1;
-document.getElementById("demo2").innerHTML = Math.floor(Math.random()*45)+1;
+function showNumber1() {
+    document.getElementById("demo1").innerHTML = Math.floor(Math.random()*45)+1;
+}
+function showNumber2() {
+    document.getElementById("demo2").innerHTML = Math.floor(Math.random()*45)+1;
+}
+showNumber1();
+showNumber2();
 document.getElementById("demo3").innerHTML = Math.floor(Math.random()*45)+1;
 document.getElementById("demo4").innerHTML = Math.floor(Math.random()*45)+1;
 document.getElementById("demo5").innerHTML = Math.floor(Math.random()*45)+1;
