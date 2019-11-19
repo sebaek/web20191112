@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <style>
+        div {
+            font-size: 30px;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="result1"></div>
+    <div id="result2"></div>
+    <div id="result3"></div>
+    <div id="result4"></div>
+    <div id="result5"></div>
+    <div id="result6"></div>
+    <div id="result7"></div>
+    <div id="result8"></div>
+    <div id="result9"></div>
+    <div id="result10"></div>
+    <div id="result11"></div>
+
+<script>
+var text = "";
+for (var i = 0; i < 5; i++) {
+    for (var j = 0; j < 5; j++) {
+        text += "*";
+    }
+    text += "<br>";
+}
+document.getElementById('result1').innerHTML = text;
+
+text = "";
+for (var i = 0; i < 5; i++) {
+    for (var j = 0; j < i+1; j++) {
+        text += "*";
+    }
+    text += "<br>";
+}
+document.getElementById('result2').innerHTML = text;
+
+text = "";
+for (var i = 0; i < 5; i++) {
+    for (var j = 0; j < i+1; j++) {
+        text += "*";
+    }
+    for (var k = 0; k < 5-i; k++) {
+        text += "#";
+    }
+    text += "<br>";
+}
+document.getElementById('result3').innerHTML = text;
+
+
+
+</script>
+</body>
+
+</html>
