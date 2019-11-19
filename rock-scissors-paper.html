@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html>
-
+<head>
+    <style>
+    button:hover {
+        background-color: beige;
+    }
+    button, div {
+        font-size: 100px;
+    }
+    #result {
+        font-weight: bold;
+    }
+    </style>
+</head>
 <body>
-    <div id="computer"></div>
 
-    
+    <button id="btn1">✌</button>
+    <button id="btn2">✊</button>
+    <button id="btn3">🖐</button>
+    <div>VS</div>
+    <div id="computer"></div>
+    <div id="result"></div>
 
     <script>
     var computer = Math.random() * 3;
