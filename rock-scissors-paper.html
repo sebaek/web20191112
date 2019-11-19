@@ -7,6 +7,7 @@
     }
     button, div {
         font-size: 100px;
+        text-align: center;
     }
     #result {
         font-weight: bold;
@@ -14,24 +15,56 @@
     </style>
 </head>
 <body>
-
-    <button id="btn1">✌</button>
-    <button id="btn2">✊</button>
-    <button id="btn3">🖐</button>
+    <div>
+        <button id="scissors" onclick="rsp(this);">✌</button>
+        <button id="rock" onclick="rsp(this);">✊</button>
+        <button id="paper" onclick="rsp(this);">🖐</button>
+    </div>
     <div>VS</div>
     <div id="computer"></div>
     <div id="result"></div>
 
     <script>
+function rsp(elem) {
+    console.log(elem.id);
+    var human = elem.id;
+    // 컴퓨터가 가위, 바위, 보 중에 하나 갖기
     var computer = Math.random() * 3;
     if (computer >= 2) {
         document.getElementById("computer").innerHTML = "✌";
+        computer = 'scissors';
     } else if (computer >= 1) {
         document.getElementById("computer").innerHTML = "✊";
+        computer = 'rock';
     } else {
         document.getElementById("computer").innerHTML = "🖐";
+        computer = 'paper';
     }
+
+    if (human == computer) {
+        document.getElementById("result").innerHTML = "DRAW";
+    } else if (human == "rock") {
+        if (computer == "scissors") {
+            document.getElementById("result").innerHTML = "WIN";
+        } else {
+            document.getElementById("result").innerHTML = "LOSE";
+        }
+    } else if (human == "scissors") {
+        if (computer == "paper") {
+            document.getElementById("result").innerHTML = "WIN";
+        } else {
+            document.getElementById("result").innerHTML = "LOSE";
+        }
+    } else if (human == "paper") {
+        if (computer == "rock") {
+            document.getElementById("result").innerHTML = "WIN";
+        } else {
+            document.getElementById("result").innerHTML = "LOSE";
+        }
+    }
+
     
+}
     </script>
 </body>
 </html>
