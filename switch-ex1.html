@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        #big-img {
+            height: 400px;
+            width: 600px;
+        }
+
+        #big-img1 {
+            height: 400px;
+            width: 600px;
+        }
+
+        .small-img {
+            height: 150px;
+            width: 200px;
+        }
+
+        .small-img img {
+            height: 150px;
+            width: 200px;
+        }
+
+        .small-container {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="big-img">
+            <img id="big-img1" src="" alt="">
+        </div>
+        <div class="small-container">
+            <div onclick="showBigImage(this);" class="small-img" id="small-img1">
+                <img src="맑음.jpg" alt="">
+            </div>
+            <div onclick="showBigImage(this);" class="small-img" id="small-img2">
+                <img src="비.jpg" alt="">
+            </div>
+            <div onclick="showBigImage(this);" class="small-img" id="small-img3">
+                <img src="흐림.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        function showBigImage(elem) {
+            var elemId = elem.id;
+
+            switch (elemId) {
+                case "small-img1":
+                    document.getElementById("big-img1").src = "맑음.jpg";
+                    break;
+                case "small-img2":
+                    document.getElementById("big-img1").src = "비.jpg";
+                    break;
+                case "small-img3":
+                    document.getElementById("big-img1").src = "흐림.jpg";
+                    break;
+            }
+        }
+
+    </script>
+</body>
