@@ -7,15 +7,20 @@
     <body>
         <input type="number" id="input1"><br>
         <button id="btn1" onclick="gugudan();">구구단</button>
+        <br>
         <input type="number" id="input2">제외
+        <br>
+        <input type="number" id="input3">까지
 
         <div id="result1"></div>
         <script>
         function gugudan() {
             var num = document.getElementById('input1').value;
             var exc = document.getElementById('input2').value;
+            var to = document.getElementById('input3').value;
             num = Number(num);
             exc = Number(exc);
+            to = Number(to);
 
             var text = "";
 
@@ -24,6 +29,9 @@
                 i++;
                 if (i == exc) {
                     continue;
+                }
+                if (i == to) {
+                    break;
                 }
                 text += num + " &times; " + i + " = " + (num * i);
                 text += "<br>";
