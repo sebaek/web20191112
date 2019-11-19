@@ -43,24 +43,14 @@ function rsp(elem) {
 
     if (human == computer) {
         document.getElementById("result").innerHTML = "DRAW";
-    } else if (human == "rock") {
-        if (computer == "scissors") {
-            document.getElementById("result").innerHTML = "WIN";
-        } else {
-            document.getElementById("result").innerHTML = "LOSE";
-        }
-    } else if (human == "scissors") {
-        if (computer == "paper") {
-            document.getElementById("result").innerHTML = "WIN";
-        } else {
-            document.getElementById("result").innerHTML = "LOSE";
-        }
-    } else if (human == "paper") {
-        if (computer == "rock") {
-            document.getElementById("result").innerHTML = "WIN";
-        } else {
-            document.getElementById("result").innerHTML = "LOSE";
-        }
+    } else if (human == "rock" && computer == "scissors") {
+        document.getElementById("result").innerHTML = "WIN";
+    } else if (human == "scissors" && computer == "paper") {
+        document.getElementById("result").innerHTML = "WIN";
+    } else if (human == "paper" && computer == "rock") {
+        document.getElementById("result").innerHTML = "WIN";
+    } else {
+        document.getElementById("result").innerHTML = "LOSE";
     }
 
     
