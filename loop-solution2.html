@@ -26,6 +26,7 @@
     <div id="result11"></div>
 
 <script>
+
 var text = "";
 for (var i = 0; i < 5; i++) {
     for (var j = 0; j < 5; j++) {
@@ -46,6 +47,15 @@ document.getElementById('result2').innerHTML = text;
 
 text = "";
 for (var i = 0; i < 5; i++) {
+    for (var j = 0; j < 5-i; j++) {
+        text += "*";
+    }
+    text += "<br>";
+}
+document.getElementById('result3').innerHTML = text;
+
+text = "";
+for (var i = 0; i < 5; i++) {
     for (var j = 0; j < i+1; j++) {
         text += "*";
     }
@@ -54,9 +64,81 @@ for (var i = 0; i < 5; i++) {
     }
     text += "<br>";
 }
-document.getElementById('result3').innerHTML = text;
+document.getElementById('result4').innerHTML = text;
 
+text = "";
+for (var i = 0; i < 5; i++) {
+    for (var j = 0; j < i+1; j++) {
+        text += "#";
+    }
+    for (var k = 0; k < 5-i; k++) {
+        text += "*";
+    }
+    text += "<br>";
+}
+document.getElementById('result5').innerHTML = text;
 
+text = "";
+for (var i = 0; i < 5; i++) {
+    for (var j = 0; j < i; j++) {
+        text += "&nbsp;";
+    }
+    for (var k = 0; k < 5-i; k++) {
+        text += "*";
+    }
+    text += "<br>";
+}
+document.getElementById('result6').innerHTML = text;
+
+text = "";
+for (var i = 0; i < 5; i++) {
+    for (var j = 0; j < 4-i; j++) {
+        text += "&nbsp;";
+    }
+    for (var k = 0; k < i + 1; k++) {
+        text += "*";
+    }
+    text += "<br>";
+}
+document.getElementById('result7').innerHTML = text;
+
+text = "";
+for (var i = 0; i < 5; i++) {
+    for (var j = 0; j < 5; j++) {
+        text += j;
+    }
+    text += "<br>";
+}
+document.getElementById('result8').innerHTML = text;
+
+text = "";
+for (var i = 0; i < 5; i++) {
+    for (var j = i; j < i + 5; j++) {
+        text += j;
+    }
+    text += "<br>";
+}
+document.getElementById('result9').innerHTML = text;
+
+text = "";
+for (var i = 0; i < 5; i++) {
+    for (var j = 0; j < i + 1; j++) {
+        text += j;
+    }
+    text += "<br>";
+}
+document.getElementById('result10').innerHTML = text;
+
+text = "";
+var k = 0;
+for (var i = 0; i < 5; i++) {
+    for (var j = 0; j < i + 1; j++) {
+        text += k % 10;
+        k++;
+    }
+    text += "<br>";
+}
+document.getElementById('result11').innerHTML = text;
 
 </script>
 </body>
