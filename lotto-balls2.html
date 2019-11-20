@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <style>
+    <head>
+        <style>
         .circle {
             display: flex;
             justify-content: center;
@@ -10,108 +9,79 @@
             width: 100px;
             height: 100px;
             border-radius: 50%;
+            background-color:dodgerblue;
             margin: 20px;
         }
-
         .circle:hover {
             box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2), 6px 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
-
         .circle:active {
             box-shadow: none;
         }
-
         .circle div {
             font-size: 50px;
             font-weight: bold;
             color: white;
         }
-    </style>
-</head>
-
+        </style>
+    </head>
 <body>
-    <button onclick="showNumbers();">로또 숫자 만들기</button>
-    <div id="ball0" class="circle">
-        <div id="demo0"></div>
-    </div>
-    <div id="ball1" class="circle">
-        <div id="demo1"></div>
-    </div>
-    <div id="ball2" class="circle">
-        <div id="demo2"></div>
-    </div>
-    <div id="ball3" class="circle">
-        <div id="demo3"></div>
-    </div>
-    <div id="ball4" class="circle">
-        <div id="demo4"></div>
-    </div>
-    <div id="ball5" class="circle">
-        <div id="demo5"></div>
-    </div>
+<button onclick="showNumbers();">로또 숫자 만들기</button>
+<div onclick="showNumber('demo1');" class="circle" id="ball0">
+    <div id="demo0"></div>
+</div>
+<div onclick="showNumber('demo2');" class="circle" id="ball1">
+    <div id="demo1"></div>
+</div>
+<div onclick="showNumber('demo3');" class="circle" id="ball2">
+    <div id="demo2"></div>
+</div>
+<div onclick="showNumber('demo4');" class="circle" id="ball3">
+    <div id="demo3"></div>
+</div>
+<div onclick="showNumber('demo5');" class="circle" id="ball4">
+    <div id="demo4"></div>
+</div>
+<div onclick="showNumber('demo6');" class="circle" id="ball5">
+    <div id="demo5"></div>
+</div>
+<script>
+function getRandomNumber() {
+    var ran = Math.floor(Math.random()*45)+1;
+    return ran;
+}
+function showNumber(elemId) {
+    document.getElementById(elemId).innerHTML = getRandomNumber();
+}
 
-    <script>
-        function getRandomNumber() {
-            var ran = Math.floor(Math.random() * 45) + 1;
-            return ran;
+function showNumbers() {
+    var numbers = [0, 0, 0, 0, 0, 0];
+    var count = 0;
+    
+    while (count < 6) {
+        var ran = getRandomNumber();
+        if (check(numbers, ran)) {
+            numbers[count] = ran;
+            count++;
         }
-        function showNumber(elemId, num) {
-            var ball = document.getElementById("ball" + elemId);
-            var elem = document.getElementById("demo" + elemId);
-            elem.innerHTML = num;
-            if (1 <= num && num <= 9) {
-                ball.style.backgroundColor = "blue";
-                elem.style.backgroundColor = "blue";
-                elem.style.color = "white";
-            } else if (10 <= num && num <= 19) {
-                ball.style.backgroundColor = "yellow";
-                elem.style.backgroundColor = "yellow";
-                elem.style.color = "black";
-            } else if (20 <= num && num <= 29) {
-                ball.style.backgroundColor = "red";
-                elem.style.backgroundColor = "red";
-                elem.style.color = "white";
-            } else if (30 <= num && num <= 39) {
-                ball.style.backgroundColor = "green";
-                elem.style.backgroundColor = "green";
-                elem.style.color = "white";
-            } else {
-                ball.style.backgroundColor = "black";
-                elem.style.backgroundColor = "black";
-                elem.style.color = "white";
-            }
+    }
+    console.log(numbers);
+}
+
+function check(array, num) {
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] === num) {
+            return false;
         }
+    }
+    return true;
+}
 
-        function showNumbers() {
-            var numbers = [0, 0, 0, 0, 0, 0];
-            var count = 0;
+showNumbers();
 
-            while (count < 6) {
-                var ran = getRandomNumber();
-                var found = false;
-                for (var i = 0; i < numbers.length; i++) {
-                    if (ran === numbers[i]) {
-                        found = true;
-                        break;
-                    }
-                }
 
-                if (!found) {
-                    numbers[count] = ran;
-                    count++;
-                }
-            }
 
-            for (var i = 0; i < 6; i++) {
-                showNumber(i, numbers[i]);
-            }
-
-        }
-
-        showNumbers();
-
-    </script>
+</script>
 
 </body>
-
 </html>
