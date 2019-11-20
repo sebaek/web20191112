@@ -50,8 +50,23 @@ function getRandomNumber() {
     var ran = Math.floor(Math.random()*45)+1;
     return ran;
 }
-function showNumber(elemId) {
-    document.getElementById(elemId).innerHTML = getRandomNumber();
+function showNumber(index, num) {
+    var ballid = "ball" + index;
+    var demoid = "demo" + index;
+
+    if (1 <= num && num <= 9) {
+        document.getElementById(ballid).style.backgroundColor = "blue";
+    } else if (10 <= num && num <= 19) {
+        document.getElementById(ballid).style.backgroundColor = "yellow";
+    } else if (20 <= num && num <= 29) {
+        document.getElementById(ballid).style.backgroundColor = "red";
+    } else if (30 <= num && num <= 39) {
+        document.getElementById(ballid).style.backgroundColor = "green";
+    } else {
+        document.getElementById(ballid).style.backgroundColor = "black";
+    }
+
+    document.getElementById(demoid).innerHTML = num;
 }
 
 function showNumbers() {
@@ -65,7 +80,10 @@ function showNumbers() {
             count++;
         }
     }
-    console.log(numbers);
+
+    for (var i = 0; i < numbers.length; i++) {
+        showNumber(i, numbers[i]);
+    }
 }
 
 function check(array, num) {
