@@ -1,3 +1,6 @@
+// function $() {
+//     console.log("달라 함수 실행");
+// }
 function getRandomNumber() {
     var ran = Math.floor(Math.random()*45)+1;
     return ran;
