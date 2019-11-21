@@ -7,7 +7,12 @@
         $(function() {
             $("#btn1").click(function() {
                 var value = $("#input1").val();
-                $("#list1").append("<li>" + value + "</li>");
+                var item = $("<li></li>");
+                item.text(value);
+                item.click(function() {
+                    $(this).remove();
+                });
+                $("#list1").append(item);
             });
             $("#btn2").click(function() {
                 $("#list1").empty();
