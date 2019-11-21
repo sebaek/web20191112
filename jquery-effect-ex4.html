@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        
+        $(document).ready(function () {
+            $("#mainMenu").click(function() {
+                $("#subMenu").animate({width: 'toggle'}, 'fast');
+            });
+        });
+    </script>
+    <style>
+    #mainMenu {
+        width: 100px;
+        height: 50px;
+        position: relative;
+        background-color: aliceblue;
+    }
+
+    #subMenu {
+        white-space: nowrap;
+        overflow: hidden;
+        position: absolute;
+        left:100px;
+        top: 0px;
+        width: 200px;
+        height: 100px;
+        background-color: beige;
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="mainMenu">
+        MAIN MENU
+        <div id="subMenu">
+            <div><a href="">Lorem, ipsum.</a></div>
+            <div><a href="">Neque, ad?</a></div>
+            <div><a href="">Nostrum, veritatis.</a></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

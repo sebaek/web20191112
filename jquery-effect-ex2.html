@@ -18,11 +18,24 @@
         
         $(document).ready(function () {
             $(".images").click(function() {
-                var imgPath = $(this).attr("src");
+                const imgPath = $(this).attr("src");
                 $("#para1").hide();
                 $("#img1").attr("src", imgPath);
                 $("#para1").fadeIn("slow");
             });
+
+            function a() {
+                if (true) {
+                    const c = 5;
+                    let l = 3;
+                    var b = 4;
+                    console.log(c);
+                }
+
+                // console.log(l);
+                console.log(b);
+            }
+            a();
         });
     </script>
 </head>

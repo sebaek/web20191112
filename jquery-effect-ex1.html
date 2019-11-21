@@ -7,9 +7,12 @@
     <script>
         
         $(document).ready(function () {
-            $("#h1").mouseenter(function () {
-                
-                $("#p1").toggle("fast");
+            $("#h1").hover(function () {
+                console.log('enter');
+                $("#p1").fadeTo('slow', 1);
+            }, function() {
+                console.log('leave');
+                $("#p1").fadeTo('slow', 0.1);
             });
 
             $("#h2").mouseleave(function() {
