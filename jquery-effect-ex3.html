@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <style>
+        div {
+            background-color: aquamarine;
+        }
+
+        #subMenu {
+            background-color: beige;
+            display: none;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        
+        $(document).ready(function () {
+            $("#mainMenu").click(function() {
+                $("#subMenu").slideToggle();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="mainMenu">
+MAIN MENU
+    </div>
+
+    <div id="subMenu">
+        <div class="item"><a href="">Lorem, ipsum.</a></div>
+        <div class="item"><a href="">Perferendis, fugit.</a></div>
+        <div class="item"><a href="">Corporis, ut.</a></div>
+        <div class="item"><a href="">Assumenda, ex.</a></div>
+        <div class="item"><a href="">Sequi, autem?</a></div>
+    </div>
+
+</body>
+
+</html>
