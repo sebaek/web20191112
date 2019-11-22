@@ -9,10 +9,10 @@ $(function() {
         var items = $("li");
 
         for (var i = 0; i < items.length; i++) {
-            if (items.eq(i).text().toLowerCase().indexOf(inputText) != -1) {
-                items.eq(i).show();
+            if ($(items[i]).text().toLowerCase().includes(inputText)) {
+                $(items[i]).show();
             } else {
-                items.eq(i).hide();
+                $(items[i]).hide();
             }
         }
 
