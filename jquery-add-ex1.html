@@ -6,14 +6,20 @@
     <script>
         $(function() {
             $("#btn1").click(function() {
+
+                // 1. element 만든다.
                 var value = $("#input1").val();
                 var item = $("<li></li>");
                 item.text(value);
+                // 2. element 붙인다.
+                $("#list1").append(item);
+
                 item.click(function() {
                     $(this).remove();
                 });
-                $("#list1").append(item);
+
             });
+
             $("#btn2").click(function() {
                 $("#list1").empty();
             });
