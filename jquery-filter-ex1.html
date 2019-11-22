@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script>
+$(function() {
+    $("#input1").keyup(function() {
+        var inputText = $(this).val().toLowerCase();
+        var items = $("li");
+
+        for (var i = 0; i < items.length; i++) {
+            if (items.eq(i).text().toLowerCase().indexOf(inputText) != -1) {
+                items.eq(i).show();
+            } else {
+                items.eq(i).hide();
+            }
+        }
+
+    });
+});
+</script>
+<style>
+</style>
+<title>
+</title>
+</head>
+<body>
+<input type="text" id="input1">
+
+<ul>
+    <li>Lorem, ipsum dolor.</li>
+    <li>Similique, cupiditate deleniti!</li>
+    <li>Nesciunt, quod nostrum!</li>
+    <li>Cum, dolores voluptatem.</li>
+    <li>Temporibus, repellat soluta.</li>
+    <li>Nobis, qui dolorem!</li>
+    <li>Laboriosam, qui debitis.</li>
+    <li>Dicta, explicabo sint.</li>
+    <li>Cupiditate, expedita accusamus.</li>
+    <li>Neque, eveniet nisi?</li>
+    <li>Quae, quas! Ullam.</li>
+    <li>Dolores, sapiente suscipit.</li>
+    <li>Quos, repudiandae quas.</li>
+    <li>Omnis, recusandae doloribus.</li>
+    <li>Veniam, eligendi illo!</li>
+    <li>Quam, minus eligendi!</li>
+    <li>Distinctio, eveniet aut?</li>
+    <li>Voluptas, obcaecati similique?</li>
+    <li>Reiciendis, cum quia!</li>
+    <li>Perferendis, aut ipsam.</li>
+    <li>Consequatur, labore tempora?</li>
+    <li>Officiis, vitae debitis.</li>
+    <li>Neque, quia harum!</li>
+    <li>Accusantium, molestias impedit!</li>
+    <li>Fugit, velit sequi!</li>
+    <li>Facilis, ut nostrum!</li>
+    <li>Libero, eaque? Similique.</li>
+    <li>Eum, obcaecati quod.</li>
+    <li>Excepturi, corrupti laudantium.</li>
+    <li>Iure, sapiente at.</li>
+    <li>Illo, repudiandae consectetur.</li>
+    <li>Ut, nisi numquam.</li>
+    <li>Quibusdam, quae non!</li>
+    <li>Veniam, doloremque iure!</li>
+    <li>Quibusdam, inventore repudiandae.</li>
+    <li>Vitae, fuga quas!</li>
+    <li>Placeat, sed consectetur?</li>
+    <li>Nesciunt, vel cumque.</li>
+    <li>Consectetur, incidunt dicta!</li>
+    <li>Quae, accusantium hic?</li>
+    <li>Harum, reiciendis necessitatibus?</li>
+    <li>Obcaecati, nulla dignissimos.</li>
+    <li>Id, commodi iure?</li>
+    <li>Dolorem, fugiat dolor.</li>
+    <li>Recusandae, consequatur nemo.</li>
+    <li>Numquam, aperiam ex!</li>
+    <li>Illum, libero tempora.</li>
+    <li>Incidunt, illum quae?</li>
+    <li>Totam, voluptas earum.</li>
+    <li>Quam, ipsum est.</li>
+    <li>Dicta, numquam nemo.</li>
+    <li>Facilis, harum labore.</li>
+    <li>Vel, eveniet nostrum!</li>
+    <li>Commodi, eveniet magni!</li>
+    <li>Necessitatibus, aut voluptates.</li>
+    <li>Quo, sed fuga?</li>
+    <li>Architecto, itaque blanditiis.</li>
+    <li>Eligendi, delectus repudiandae?</li>
+    <li>Illo, magnam debitis?</li>
+    <li>Aliquam, magnam perspiciatis?</li>
+    <li>Debitis, ducimus quae.</li>
+    <li>Soluta, magni tempora.</li>
+    <li>Dolores, consequatur exercitationem.</li>
+    <li>Rem, animi natus!</li>
+    <li>Delectus, tempore quia.</li>
+    <li>Tempore, sed officia?</li>
+    <li>Reiciendis, harum nihil.</li>
+    <li>Voluptates, praesentium ad.</li>
+    <li>Consequatur, nostrum porro.</li>
+    <li>Facere, necessitatibus accusantium.</li>
+    <li>Adipisci, officia! Est!</li>
+    <li>Harum, commodi perferendis?</li>
+    <li>Exercitationem, tempora facilis.</li>
+    <li>Veritatis, quas repudiandae?</li>
+    <li>Ipsam, dolorem fuga!</li>
+    <li>Recusandae, hic minus.</li>
+    <li>Eveniet, exercitationem quasi!</li>
+    <li>Voluptatum, tempora cupiditate.</li>
+    <li>Culpa, est ducimus?</li>
+    <li>Nulla, reprehenderit esse?</li>
+    <li>Dignissimos, aliquid non!</li>
+    <li>Molestiae, laboriosam a?</li>
+    <li>Et, eveniet expedita.</li>
+    <li>Labore, voluptatem atque!</li>
+    <li>Quaerat, neque in.</li>
+    <li>Quisquam, tempora labore.</li>
+    <li>Aliquam, aut eaque!</li>
+    <li>At, dolore. Illum?</li>
+    <li>Mollitia, asperiores aliquam.</li>
+    <li>Voluptatem, consectetur architecto.</li>
+    <li>Maxime, error delectus!</li>
+    <li>Excepturi, soluta perspiciatis.</li>
+    <li>Exercitationem, voluptas obcaecati!</li>
+    <li>A, perspiciatis quod.</li>
+    <li>Laboriosam, dignissimos id?</li>
+    <li>Quisquam, ex quas.</li>
+    <li>Fugit, expedita corporis.</li>
+    <li>Alias, ex optio.</li>
+    <li>Obcaecati, blanditiis quisquam.</li>
+    <li>Fuga, commodi officiis!</li>
+</ul>
+</body>
+</html>
