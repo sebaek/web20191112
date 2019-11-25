@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    function mymethod(e) {
+        console.log(e);
+
+    }
+    
+    window.addEventListener("load", function() {
+        document.getElementById("btn1").addEventListener("click", mymethod);
+    });
+    </script>
+<style>
+.container {
+    display: flex;
+    border: 3px solid blue;
+    height: 200px;
+}
+
+.item {
+    border: 1px solid black;
+    width: 100px;
+    background-color: yellow;
+    flex-basis: 150px;
+}
+
+.item:last-child {
+    flex:1;
+}
+</style>
+</head>
+<body>
+<button onclick="mymethod(event)">hello</button>
+<button id="btn1">btn2</button>   
+<p>Lorem, ipsum dolor.</p>
+<h1>Lorem, ipsum.</h1> 
+<div class="container">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+</div>
+
+</body>
+</html>

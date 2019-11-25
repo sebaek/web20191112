@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+$(document).ready(function() {
+    $("#checkbox1").change(function(){
+        if ($(this).prop("checked")) {
+            $(".checkboxs").prop("checked", true);
+        } else {
+            $(".checkboxs").prop("checked", false);
+        }
+    });
+});
+        </script>
+    </head>
+
+    <body>
+        <label for=""><input type="checkbox" name="" id="checkbox1"></label><br>
+        <label for=""><input type="checkbox" class="checkboxs" name="" id="checkbox2"></label><br>
+        <label for=""><input type="checkbox" class="checkboxs" name="" id="checkbox3"></label><br>
+        <label for=""><input type="checkbox" class="checkboxs" name="" id="checkbox4"></label><br>
+        <label for=""><input type="checkbox" class="checkboxs" name="" id="checkbox5"></label><br>
+        <label for=""><input type="checkbox" class="checkboxs" name="" id="checkbox6"></label>
+
+    </body>
+</html>

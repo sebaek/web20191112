@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function bike() {
+            var name = "Ninja";
+            this.maker = "Kawasaki";
+            console.log(this.name + " " + this.maker);  // undefined Bajaj
+        }
+
+        var name = "Pulsar";
+        var maker = "Bajaj";
+
+        obj = new bike();
+        console.log(obj.maker);                  // "Kawasaki"
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    button, div {
+        font-size: 100px;
+    }
+
+    div {
+        text-align: center;
+    }
+
+    button:hover {
+        background-color: beige;
+    }
+
+    #result {
+        font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+
+    <div>
+        <button id="scissors" onclick="rsp(this);">✌</button>
+        <button id="rock" onclick="rsp(this);">✊</button>
+        <button id="paper" onclick="rsp(this);">🖐</button>
+    </div>
+
+    <div>VS</div>
+
+    <div id="computer">
+
+    </div>
+
+    <div id="result">
+
+    </div>
+    <script>
+function rsp(elem) {
+    var computer = Math.random() * 3;
+    var human = elem.id;
+
+    if (computer > 2) {
+        document.getElementById("computer").innerHTML = "🖐";
+        computer = 'paper';
+    } else if (computer > 1) {
+        document.getElementById("computer").innerHTML = "✊";
+        computer = 'rock';
+    } else {
+        document.getElementById("computer").innerHTML = "✌";
+        computer = 'scissors'
+    }
+
+    if (human == computer) {
+        document.getElementById("result").innerHTML = "DRAW";
+    } else if (human == 'rock' && computer == 'scissors') {
+        document.getElementById("result").innerHTML = "WIN";
+    } else if (human == 'scissors' && computer == 'paper') {
+        document.getElementById("result").innerHTML = "WIN";
+    } else if (human == 'paper' && computer == 'rock') {
+        document.getElementById("result").innerHTML = "WIN";
+    } else {
+        document.getElementById("result").innerHTML = "LOSE";
+    }
+
+}
+    </script>
+</body>
+</html>

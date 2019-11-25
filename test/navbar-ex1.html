@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.menu {
+    background-color: black;    
+}
+.menu > li {
+    display: inline-block;
+    border: 5px solid black;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+.menu > li:hover {
+    border-bottom: 5px solid yellow;
+}
+
+.menu > li:hover > .submenu {
+    display: block;
+}
+
+.submenu {
+    list-style-type: none;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    display: none;
+    position: absolute;
+}
+
+.submenu >li {
+    margin-top: 15px;
+}
+</style>
+
+</head>
+<body>
+    <ul class="menu">
+        <li>
+            Lorem.
+            <ul class="submenu">
+                <li>Lorem.</li>
+                <li>Deserunt?</li>
+                <li>Perferendis!</li>
+                <li>Repudiandae.</li>
+                <li>Facilis.</li>
+            </ul>
+        </li>
+        <li>
+            Expedita?
+            <ul class="submenu">
+                <li>Facere.</li>
+                <li>Commodi!</li>
+                <li>Odio?</li>
+                <li>Quibusdam!</li>
+                <li>Veritatis.</li>
+            </ul>
+        </li>
+        <li>
+            Exercitationem?
+            <ul class="submenu">
+                <li>Voluptate.</li>
+                <li>Aspernatur.</li>
+                <li>Illo?</li>
+                <li>Error.</li>
+                <li>Doloremque?</li>
+            </ul>
+        </li>
+        <li>
+            Perferendis?
+            <ul class="submenu">
+                <li>Aliquid!</li>
+                <li>Temporibus!</li>
+                <li>Repellat?</li>
+                <li>Exercitationem.</li>
+                <li>Laborum!</li>
+            </ul>
+        </li>
+    </ul>
+
+
+</body>
+</html>
